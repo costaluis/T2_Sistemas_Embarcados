@@ -15,9 +15,7 @@ Rodrigo Augusto Valeretto | 10684792
 Instalar os seguintes pacotes pré-requisitos:
 
 ```
-$ sudo apt-get install autoconf automake autotools-dev curl python3
-libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex
-texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
+$ sudo apt-get install autoconf automake autotools-dev curl python3 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
 ```
 
 Clonar o repositório da toolchain:
