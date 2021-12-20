@@ -15,7 +15,7 @@ Rodrigo Augusto Valeretto | 10684792
 Instalar os seguintes pacotes pré-requisitos:
 
 ```
-sudo apt-get install autoconf automake autotools-dev curl python3
+$ sudo apt-get install autoconf automake autotools-dev curl python3
 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex
 texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
 ```
@@ -23,19 +23,19 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
 Clonar o repositório da toolchain:
 
 ```
-git clone https://github.com/riscv/riscv-gnu-toolchain
+$ git clone https://github.com/riscv/riscv-gnu-toolchain
 ```
 
 Escolher onde será instalado a toolchain e adicionar o caminho/bin ao PATH. Por exemplo, se instalado em opt/riscv, adicione opt/riscv/bin ao PATH. Em seguida, basta executar o seguinte comando:
 
 ```
-./configure --prefix=/opt/riscv --with-arch=rv32i --with-abi=ilp32
-make
+$ ./configure --prefix=/opt/riscv --with-arch=rv32i --with-abi=ilp32
+$ make
 ```
 
 A toolchain agora está configurada. O próximo passo é instalar o GHDL, o que pode ser feito com o seguinte comando:
 ```
-sudo apt-get install ghdl gtkwave
+$ sudo apt-get install ghdl gtkwave
 ```
 
 Em sim/simple/ghdl.run.sh, muda-se o --stop-time para 300 ms
@@ -45,5 +45,5 @@ Com isso, tudo foi configurado; agora é preciso obter os arquivos do processado
 Para executar o filtro extrator de contornos, basta executar o seguinte comando:
 
 ```
-make USER_FLAGS+=-DUART0_SIM_MODE MARCH=rv32ic clean_all sim
+$ make USER_FLAGS+=-DUART0_SIM_MODE MARCH=rv32ic clean_all sim
 ```
